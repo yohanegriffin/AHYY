@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 08f4dce4c46d0b74487c359187641fd5
+=======
+guid: 512a49d95c0c4332bdd98131869c23c9
+>>>>>>> 2b5913a9 (Simple title screen with a working start button)
 folderAsset: yes
 timeCreated: 1441876896
 licenseType: Pro

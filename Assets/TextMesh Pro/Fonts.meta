@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 6dd24c08f51dfbf42bfa41aaf9c1275c
+=======
+guid: 6ab70aee4d56447429c680537fbf93ed
+>>>>>>> 2b5913a9 (Simple title screen with a working start button)
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
