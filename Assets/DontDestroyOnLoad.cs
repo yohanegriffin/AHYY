@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DontDestroyMusic : MonoBehaviour
+public class DontDestroyOnLoad : MonoBehaviour
 {
     void Awake()
     {
-        DontDestroyMusic(transform.gameObject);
+        DontDestroyOnLoad(gameObject);
     }
 }
