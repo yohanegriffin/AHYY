@@ -9,6 +9,9 @@ public class mapGenerator : MonoBehaviour
     [SerializeField] private int mapWidth;
     [SerializeField] private int mapHeight;
 
+    private List<GameObject> mapTiles = new List<GameObject>();
+    private List<GameObject> pathTiles = new List<GameObject>();
+
     private void Start()
     {
         generateMap();
@@ -21,6 +24,8 @@ public class mapGenerator : MonoBehaviour
             for(int x = 0; x < mapWidth; x++)
             {
                 GameObject newTile = Instantiate(mapTile);
+
+                mapTiles.Add(newTile);
 
                 newTile.transform.position = new Vector2(x, y);
             }
