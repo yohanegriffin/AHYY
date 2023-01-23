@@ -13,5 +13,12 @@ public void QuitGame (){
     Debug.Log("QUIT");
     Application.Quit(); 
 }
-    
+    public void MuteToggle(bool muted){
+        if (muted){
+            AudioListener.volume = 0;
+        }
+        else{
+            AudioListener.volume = 1;
+        }
+    }
 }
