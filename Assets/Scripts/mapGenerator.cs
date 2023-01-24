@@ -117,12 +117,10 @@ public class mapGenerator : MonoBehaviour
         Down();
         Down();
         Down();
-        
         Right();
         Right();
         Right();
         Right();
-        
         Up();
         Up();
         Right();
