@@ -18,7 +18,7 @@ public void QuitGame (){
             AudioListener.volume = 0;
         }
         else{
-            AudioListener.volume = 1;
+            AudioListener.volume = 100;
         }
     }
 }
