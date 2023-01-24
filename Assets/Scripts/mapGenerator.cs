@@ -12,9 +12,79 @@ public class mapGenerator : MonoBehaviour
     private List<GameObject> mapTiles = new List<GameObject>();
     private List<GameObject> pathTiles = new List<GameObject>();
 
+    private GameObject currentTile;
+    private int currentIndex;
+    private int nextIndex;
+
     private void Start()
     {
         generateMap();
+    }
+
+    private List<GameObject> getTopEdgeTiles()
+    {
+        List<GameObject> edgeTiles = new List<GameObject>();
+
+        for (int i = mapWidth * (mapHeight-1); i < mapWidth * mapHeight; i++)
+        {
+            edgeTiles.Add(mapTiles[i]);
+
+        }
+
+
+        return edgeTiles;
+    }
+
+    private List<GameObject> getBottomEdgeTiles()
+    {
+        List<GameObject> edgeTiles = new List<GameObject>();
+
+        for(int i = 0; i < mapWidth; i++)
+        {
+            edgeTiles.Add(mapTiles[i]);
+        }
+
+        return edgeTiles;
+    }
+
+    private void Up()
+    {
+
+    pathTiles.Add(currentTile);
+    currentIndex = mapTiles.IndexOf(currentTile);
+    nextIndex = currentIndex + mapWidth;
+    currentTile = mapTiles[nextIndex];
+
+    }
+
+    private void Down()
+    {
+
+    pathTiles.Add(currentTile);
+    currentIndex = mapTiles.IndexOf(currentTile);
+    nextIndex = currentIndex - mapWidth;
+    currentTile = mapTiles[nextIndex];
+
+    }
+
+    private void Left()
+    {
+
+    pathTiles.Add(currentTile);
+    currentIndex = mapTiles.IndexOf(currentTile);
+    nextIndex = currentIndex--;
+    currentTile = mapTiles[nextIndex];
+
+    }
+
+    private void Right()
+    {
+
+    pathTiles.Add(currentTile);
+    currentIndex = mapTiles.IndexOf(currentTile);
+    nextIndex = currentIndex++;
+    currentTile = mapTiles[nextIndex];
+
     }
 
     private void generateMap()
@@ -29,6 +99,58 @@ public class mapGenerator : MonoBehaviour
 
                 newTile.transform.position = new Vector2(x, y);
             }
+
+        }
+        List<GameObject> topEdgeTiles = getTopEdgeTiles();
+        List<GameObject> bottomEdgeTiles = getBottomEdgeTiles();
+
+        GameObject startTile = topEdgeTiles[2];
+        GameObject endTile = bottomEdgeTiles[6];
+
+        GameObject currentTile = startTile;
+
+        print(mapTiles.IndexOf(currentTile).ToString());
+
+        //Start of stupid map generation
+        Down();
+        Down();
+        Down();
+        Down();
+        Right();
+        Right();
+        Right();
+        Right();
+        Up();
+        Up();
+        Right();
+        Right();
+        Right();
+        Right();
+        Down();
+        Down();
+        Down();
+        Down();
+        Left();
+        Left();
+        Left();
+        Left();
+        Left();
+        Left();
+        Left();
+        Down();
+        Down();
+        Down();
+        Down();
+        Right();
+        Right();
+        Right();
+        Down();
+        Down();
+
+
+        foreach(GameObject obj in pathTiles)
+        {
+            Destroy(obj);
         }
     }
 }
