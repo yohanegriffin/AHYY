@@ -16,6 +16,8 @@ public class mapGenerator : MonoBehaviour
     private int currentIndex;
     private int nextIndex;
 
+    public Color pathColor;
+
     private void Start()
     {
         generateMap();
@@ -72,7 +74,7 @@ public class mapGenerator : MonoBehaviour
 
     pathTiles.Add(currentTile);
     currentIndex = mapTiles.IndexOf(currentTile);
-    nextIndex = currentIndex--;
+    nextIndex = currentIndex - 1;
     currentTile = mapTiles[nextIndex];
 
     }
@@ -82,7 +84,7 @@ public class mapGenerator : MonoBehaviour
 
     pathTiles.Add(currentTile);
     currentIndex = mapTiles.IndexOf(currentTile);
-    nextIndex = currentIndex++;
+    nextIndex = currentIndex + 1;
     currentTile = mapTiles[nextIndex];
 
     }
@@ -107,19 +109,20 @@ public class mapGenerator : MonoBehaviour
         GameObject startTile = topEdgeTiles[2];
         GameObject endTile = bottomEdgeTiles[6];
 
-        GameObject currentTile = startTile;
+        currentTile = startTile;
 
-        print(mapTiles.IndexOf(currentTile).ToString());
 
         //Start of stupid map generation
         Down();
         Down();
         Down();
         Down();
+        
         Right();
         Right();
         Right();
         Right();
+        
         Up();
         Up();
         Right();
@@ -146,11 +149,12 @@ public class mapGenerator : MonoBehaviour
         Right();
         Down();
         Down();
+        pathTiles.Add(endTile);
+        // end of map generation
 
-
-        foreach(GameObject obj in pathTiles)
+        foreach (GameObject obj in pathTiles)
         {
-            Destroy(obj);
+            obj.GetComponent<SpriteRenderer>().color = pathColor;
         }
     }
 }
