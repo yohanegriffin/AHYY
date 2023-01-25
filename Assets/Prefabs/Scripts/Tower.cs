@@ -10,7 +10,7 @@ public class Tower : MonoBehaviour
 
     private float nextTimeToShoot;
 
-    private GameObject currentTarget;
+    public GameObject currentTarget;
 
     private void Start()
     {
