@@ -46,7 +46,7 @@ public class Tower : MonoBehaviour
         }
     }
 
-    private void shoot()
+    protected virtual void shoot()
     {
         
             Enemy enemyScript = currentTarget.GetComponent<Enemy>();
