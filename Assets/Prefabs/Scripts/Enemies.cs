@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Enemies : MonoBehaviour
 {
-    public static List<GameObject> enemies;
+   public static List<GameObject> enemies = new List<GameObject>();
 }
