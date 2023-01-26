@@ -6,7 +6,7 @@ public class barrelTargeting : MonoBehaviour
 {
     public Transform pivot;
     public Transform barrel;
-
+    
     public Tower tower;
 
     private void Update()
@@ -15,12 +15,14 @@ public class barrelTargeting : MonoBehaviour
         {
             if(tower.currentTarget != null)
             {
-            Vector2 relative = tower.currentTarget.Transform.position - pivot.position;
+            Vector2 relative = tower.currentTarget.transform.position - pivot.position;
 
             float angle = Mathf.Atan2(relative.y, relative.x) * Mathf.Rad2Deg;
-
+            Vector3 newRotation = new Vector3(0, 0, angle);
+            pivot.localRotation = Quaternion.Euler(newRotation);
 
             }
         }
     }
+    
 }

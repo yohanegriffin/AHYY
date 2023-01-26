@@ -19,18 +19,23 @@ public class Tower : MonoBehaviour
 
     private void updateNearestEnemy()
     {
-        GameObject currentNearestEnemy;
+        GameObject currentNearestEnemy = null;
         float distance = Mathf.Infinity;
         foreach (GameObject enemy in Enemies.enemies)
         {
-            float _distance = (transform.position - enemy.transform.position).magnitude;
-
-            if(_distance < distance)
+            if(enemy != null)
             {
-                distance = _distance;
-                currentNearestEnemy = enemy;
+
+                float _distance = (transform.position - enemy.transform.position).magnitude;
+
+                if(_distance < distance)
+                {
+                    distance = _distance;
+                    currentNearestEnemy = enemy;
+                }
             }
         }
+            
         if(distance <= range)
         {
             currentTarget = currentNearestEnemy;
@@ -41,7 +46,7 @@ public class Tower : MonoBehaviour
         }
     }
 
-    private void shoot()
+    protected virtual void shoot()
     {
         
             Enemy enemyScript = currentTarget.GetComponent<Enemy>();

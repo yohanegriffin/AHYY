@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 432806170}
   m_Layer: 0
-  m_Name: pivot
+  m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,7 +58,7 @@ Transform:
   m_GameObject: {fileID: 1106768088}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.33, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.15, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 432806170}
@@ -102,9 +102,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: 1687811843
+  m_SortingLayer: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 54c9b32f49d4e9443a4970be84609a8a, type: 3}
   m_Color: {r: 0.4339623, g: 0.4339623, b: 0.4339623, a: 1}
   m_FlipX: 0
@@ -126,6 +126,8 @@ GameObject:
   m_Component:
   - component: {fileID: 89174720174573699}
   - component: {fileID: 9028329000591539717}
+  - component: {fileID: -2013873574450921722}
+  - component: {fileID: 1992824172}
   m_Layer: 0
   m_Name: basicTower
   m_TagString: Untagged
@@ -187,8 +189,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 928001521
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: 0f1aae88d929f9a43a90aa3de844ecc4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -201,3 +203,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-2013873574450921722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959773958016124928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d554a7a948b3494e8ff91db39aab487, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 100
+  damage: 2
+  attackTime: 0.5
+  currentTarget: {fileID: 0}
+  pivot: {fileID: 432806170}
+  barrel: {fileID: 1106768089}
+  bullet: {fileID: 404086884319328855, guid: e28edec9cd7f48744a0b019794a3585b, type: 3}
+--- !u!114 &1992824172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959773958016124928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a85185e9abddbf4aafafb0cf3372359, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pivot: {fileID: 432806170}
+  barrel: {fileID: 1106768089}
+  tower: {fileID: -2013873574450921722}
