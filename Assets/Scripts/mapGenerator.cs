@@ -9,12 +9,15 @@ public class mapGenerator : MonoBehaviour
     [SerializeField] private int mapWidth;
     [SerializeField] private int mapHeight;
 
-    private List<GameObject> mapTiles = new List<GameObject>();
-    private List<GameObject> pathTiles = new List<GameObject>();
+    public static List<GameObject> mapTiles = new List<GameObject>();
+    public static List<GameObject> pathTiles = new List<GameObject>();
 
     private GameObject currentTile;
+    public static GameObject startTile;
+    public static GameObject endTile;
     private int currentIndex;
     private int nextIndex;
+
 
     public Color pathColor;
 
@@ -106,8 +109,8 @@ public class mapGenerator : MonoBehaviour
         List<GameObject> topEdgeTiles = getTopEdgeTiles();
         List<GameObject> bottomEdgeTiles = getBottomEdgeTiles();
 
-        GameObject startTile = topEdgeTiles[2];
-        GameObject endTile = bottomEdgeTiles[6];
+        startTile = topEdgeTiles[2];
+        endTile = bottomEdgeTiles[6];
 
         currentTile = startTile;
 

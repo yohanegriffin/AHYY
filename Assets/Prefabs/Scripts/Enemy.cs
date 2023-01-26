@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
     }
 
     private void initializeEnemy() {
-       // targetTile = MapGenerator.startTile; 
+       targetTile = mapGenerator.startTile; 
     }
 
     public void takeDamage(float amount)
@@ -39,28 +39,28 @@ public class Enemy : MonoBehaviour
         Enemies.enemies.Remove(gameObject);
         Destroy(transform.gameObject);
     }
-/*
+
     private void moveEnemy() {
         transform.position = Vector3.MoveTowards(transform.position, targetTile.transform.position, movementSpeed * Time.deltaTime);
     }
 
     private void checkPosition() {
-        if(targetTile != null && targetTile != MapGenerator.endTile) 
+        if(targetTile != null && targetTile != mapGenerator.endTile) 
         {
-            final distance = (transform.position - targetTile.transform.position).magnitude;
+            float distance = (transform.position - targetTile.transform.position).magnitude;
 
             if(distance < 0.001f)
             {
-                int currentIndex = MapGenerator.pathTiles.IndexOf(targetTile);
+                int currentIndex = mapGenerator.pathTiles.IndexOf(targetTile);
 
-                targetTile = MapGenerator.pathTiles[currentIndex + 1];
+                targetTile = mapGenerator.pathTiles[currentIndex + 1];
             }
         }
     }
-    */
+    
     private void Update() {
-    //checkPosition();
-    //moveEnemy();
+    checkPosition();
+    moveEnemy();
 
     
     }
