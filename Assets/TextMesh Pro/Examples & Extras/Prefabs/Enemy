@@ -12,8 +12,8 @@ public class Enemy : MonoBehaviour
     private GameObject targetTile; 
 
     private void Start() {
-
-    }
+        initializeEnemy();
+    } 
 
     private void initializeEnemy() {
         targetTile = MapGenerator.startTile; 
@@ -27,7 +27,13 @@ public class Enemy : MonoBehaviour
         if(targetTile != null && targetTile != MapGenerator.endTile) 
         {
             final distance = (transform.position - targetTile.transform.position).magnitude;
+            if(distance < 0.001f) 
+            {
+                int currentIndex = MapGenerator.pathTiles.IndexOf(targetTile)+1;
+            }
         }
+
+
     }
 
     private void Update() {
