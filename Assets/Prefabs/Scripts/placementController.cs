@@ -69,6 +69,7 @@ public class placementController : MonoBehaviour
                     newTowerObject.transform.position = hoverTile.transform.position;
 
                     endBuilding();
+                    shopManager.buyTower(basicTowerObject);
                 }
                 else
                 {
