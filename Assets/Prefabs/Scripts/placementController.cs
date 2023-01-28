@@ -73,7 +73,7 @@ public class placementController : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Not enough money!!")
+                    Debug.Log("Not enough money!!");
                 }
             }
         }
@@ -110,7 +110,6 @@ public class placementController : MonoBehaviour
 
     public void Update()
     {
-        Debug.Log(GetMousePosition());
         if(isBuilding == true)
         {
             if(dummyPlacement != null)
