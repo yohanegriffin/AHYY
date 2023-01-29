@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class playerHealth : MonoBehaviour
 {
-    private int currentPlayerHealth;
+    private float currentPlayerHealth;
 
-    public int startingHealth;
+    public float startingHealth;
 
     public void Start()
     {
         resetPlayerHealth();
     }
 
-    public void damagePlayer(int amount)
+    public void damagePlayer(float amount)
     {
         currentPlayerHealth -= amount;
         Debug.Log("Did " + amount + " damage, player now has " + getCurrentPlayerHealth() + " health");
@@ -25,7 +25,7 @@ public class playerHealth : MonoBehaviour
         currentPlayerHealth = startingHealth;
     }
 
-    public int getCurrentPlayerHealth()
+    public float getCurrentPlayerHealth()
     {
         return currentPlayerHealth;
     }

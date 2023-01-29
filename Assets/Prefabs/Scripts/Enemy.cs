@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
     public playerHealth playerHealth;
 
 
-    [SerializeField] public int killReward; //The amount of money received when killed
+    [SerializeField] private int killReward; //The amount of money received when killed
     [SerializeField] private int damage;// Health subtracted when enemy reaches the end 
 
     private GameObject targetTile; 
@@ -38,7 +38,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void addKillReward(int amount)
+    private void addKillReward(int amount)
     {
         moneyManager.addMoney(amount);
     }

@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class healthBarUI : MonoBehaviour
 {
-    public playerHealth playerhealth;
+    public playerHealth playerHealth;
     public Image healthBarBar;
 
     public void Update()
     {
-        healthBarBar.fillAmount = playerhealth.getCurrentPlayerHealth() / playerhealth.startingHealth;
+        healthBarBar.fillAmount = playerHealth.getCurrentPlayerHealth() / playerHealth.startingHealth;
     }
 }

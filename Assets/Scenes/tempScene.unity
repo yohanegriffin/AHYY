@@ -720,10 +720,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 117531465, guid: 597a5e2fec86d3e43a98aebcdcf48f31, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -60437635, guid: 1444974c4ba5e484baed0a4314369293, type: 3}
     - target: {fileID: 372008303, guid: 597a5e2fec86d3e43a98aebcdcf48f31, type: 3}
       propertyPath: moneyManager
       value: 
       objectReference: {fileID: 609789944}
+    - target: {fileID: 649356066, guid: 597a5e2fec86d3e43a98aebcdcf48f31, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1347678964, guid: 1444974c4ba5e484baed0a4314369293, type: 3}
+    - target: {fileID: 924455754, guid: 597a5e2fec86d3e43a98aebcdcf48f31, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 938810054}
     - target: {fileID: 924455754, guid: 597a5e2fec86d3e43a98aebcdcf48f31, type: 3}
       propertyPath: playerhealth
       value: 
@@ -732,10 +744,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 509633942}
+    - target: {fileID: 1238225329, guid: 597a5e2fec86d3e43a98aebcdcf48f31, type: 3}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1583799759, guid: 597a5e2fec86d3e43a98aebcdcf48f31, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 509633942}
+    - target: {fileID: 1720319646164074903, guid: 597a5e2fec86d3e43a98aebcdcf48f31, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 61.079956
+      objectReference: {fileID: 0}
     - target: {fileID: 1720319646164074903, guid: 597a5e2fec86d3e43a98aebcdcf48f31, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -228.51001
@@ -744,6 +764,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 509633942}
+    - target: {fileID: 1720319647065058767, guid: 597a5e2fec86d3e43a98aebcdcf48f31, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1036332665, guid: 1444974c4ba5e484baed0a4314369293, type: 3}
     - target: {fileID: 1720319647693107384, guid: 597a5e2fec86d3e43a98aebcdcf48f31, type: 3}
       propertyPath: m_Camera
       value: 
