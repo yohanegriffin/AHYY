@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class roundController : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class roundController : MonoBehaviour
     public bool isRoundGoing;
     public bool isIntermission;
     public bool isStartOfRound;
+
+    public playerHealth playerHealth;
 
     public int round;
 
@@ -77,7 +80,7 @@ public class roundController : MonoBehaviour
         }
         else if(isRoundGoing)
         {
-            if(Enemies.enemies.Count > 0)
+            if(Enemies.enemies.Count > 3)
             {
 
             }

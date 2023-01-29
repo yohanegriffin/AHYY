@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerHealth : MonoBehaviour
 {
@@ -17,6 +18,10 @@ public class playerHealth : MonoBehaviour
     {
         currentPlayerHealth -= amount;
         Debug.Log("Did " + amount + " damage, player now has " + getCurrentPlayerHealth() + " health");
+        if(currentPlayerHealth <= 0)
+        {
+            endGame();
+        }
 
     }
 
@@ -29,4 +34,10 @@ public class playerHealth : MonoBehaviour
     {
         return currentPlayerHealth;
     }
+
+    public void endGame()
+    {
+        SceneManager.LoadScene(1);
+    }
+
 }

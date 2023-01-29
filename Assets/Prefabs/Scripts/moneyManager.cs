@@ -5,29 +5,30 @@ using UnityEngine;
 public class moneyManager : MonoBehaviour
 {
     private int currentPlayerMoney;
-    public int starterMoney;
+    private int starterMoney;
 
     public void Start()
     {
-        currentPlayerMoney = starterMoney;
+        starterMoney = 100;
+        this.currentPlayerMoney = starterMoney;
         Debug.Log("Current Money " + getCurrentMoney());
     }
 
     public int getCurrentMoney()
     {
-        return currentPlayerMoney;
+        return this.currentPlayerMoney;
     }
 
     public void addMoney(int amount)
     {
-        currentPlayerMoney += amount;
-        Debug.Log("Added " + amount + " to player's money, the player now has " + currentPlayerMoney);
+        this.currentPlayerMoney += amount;
+        Debug.Log("Added " + amount + " to player's money, the player now has " + this.currentPlayerMoney);
     }
 
     public void removeMoney(int amount)
     {
-        currentPlayerMoney -= amount;
-        Debug.Log("Removed" + amount + " from player's money, the player now has " + currentPlayerMoney);
+        this.currentPlayerMoney -= amount;
+        Debug.Log("Removed" + amount + " from player's money, the player now has " + this.currentPlayerMoney);
     }
 
 }

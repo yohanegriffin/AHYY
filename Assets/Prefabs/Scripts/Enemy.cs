@@ -6,8 +6,8 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private float enemyHealth; 
     [SerializeField] private float movementSpeed; 
-    public moneyManager moneyManager;
     public playerHealth playerHealth;
+    public moneyManager moneyManager;
 
 
     [SerializeField] private int killReward; //The amount of money received when killed
@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour
 
     private void Start() {
     initializeEnemy();
+      
     }
 
     private void initializeEnemy() {
@@ -38,16 +39,16 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void addKillReward(int amount)
+    /*private void addKillReward(int amount)
     {
-        moneyManager.addMoney(amount);
+        moneyManager.removeMoney(amount);
     }
-
+    */
     private void die()
     {
         Enemies.enemies.Remove(gameObject);
         Destroy(transform.gameObject);
-        addKillReward(killReward);
+        moneyManager.addMoney(killReward);
     }
 
     private void reachedEndofLevel()
@@ -58,7 +59,8 @@ public class Enemy : MonoBehaviour
     }
 
     private void moveEnemy() {
-        transform.position = Vector3.MoveTowards(transform.position, targetTile.transform.position, movementSpeed * Time.deltaTime);
+         gameObject.transform.position = Vector3.MoveTowards(transform.position, targetTile.transform.position, movementSpeed * Time.deltaTime);
+       
     }
 
     private void checkPosition() {
@@ -81,7 +83,10 @@ public class Enemy : MonoBehaviour
     
     private void Update() {
     checkPosition();
+    if(this){
     moveEnemy();
+
+    }
 
     
     }
