@@ -7,8 +7,12 @@ public class shopManager : MonoBehaviour
     public moneyManager moneyManager;
 
     public GameObject basicTowerPrefab;
+    public GameObject sniperTowerPrefab;
+    public GameObject fastTowerPrefab;
     
     public int basicTowerCost;
+    public int sniperTowerCost;
+    public int fastTowerCost;
 
     public int getTowerCost(GameObject towerPrefab)
     {
@@ -17,6 +21,14 @@ public class shopManager : MonoBehaviour
         if(towerPrefab == basicTowerPrefab)
         {
             cost = basicTowerCost;
+        }
+        else if(towerPrefab == sniperTowerPrefab)
+        {
+            cost = sniperTowerCost;
+        }
+        else if(towerPrefab == fastTowerPrefab)
+        {
+            cost = fastTowerCost;
         }
 
         return cost;

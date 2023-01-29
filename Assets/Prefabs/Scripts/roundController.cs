@@ -5,6 +5,8 @@ using UnityEngine;
 public class roundController : MonoBehaviour
 {
     public GameObject basicEnemy;
+    public GameObject fastEnemy;
+    public GameObject tankEnemy;
 
     public float timeBetweenWaves;
     public float timeBeforeRoundStarts;
@@ -36,8 +38,18 @@ public class roundController : MonoBehaviour
         for(int i = 0; i < round; i++)
         {
             GameObject newEnemy = Instantiate(basicEnemy, mapGenerator.startTile.transform.position, Quaternion.identity);
+            if(round % 2 == 0)
+            {
+                GameObject newFastEnemy = Instantiate(fastEnemy, mapGenerator.startTile.transform.position, Quaternion.identity);
+            }
+
+            if(round % 5 == 0)
+            {
+                GameObject newTankEnemy = Instantiate(tankEnemy, mapGenerator.startTile.transform.position, Quaternion.identity);
+            }
             yield return new WaitForSeconds(1f);
         }
+        
     }
 
     private void Update()

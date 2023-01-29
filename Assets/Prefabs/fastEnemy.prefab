@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -8461687009926366549}
   - component: {fileID: -2345748517222722709}
   m_Layer: 0
-  m_Name: basicEnemy
+  m_Name: fastEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: d701090efc78125459b6ecea74b23e95, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.68882465, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.13646793, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -98,12 +98,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dd9926f935089c42b00e37139a163cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 10
-  movementSpeed: 5
+  enemyHealth: 5
+  movementSpeed: 2
   moneyManager: {fileID: 6610531612572350536, guid: 16e8d27a20514ef4698b900a4da60cfc, type: 3}
   playerHealth: {fileID: 8021496710425486212, guid: 467a03865d912494cbe911062974a931, type: 3}
-  killReward: 10
-  damage: 2
+  killReward: 15
+  damage: 1
 --- !u!61 &-2345748517222722709
 BoxCollider2D:
   m_ObjectHideFlags: 0

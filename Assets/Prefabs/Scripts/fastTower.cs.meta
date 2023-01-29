@@ -1,10 +1,9 @@
 fileFormatVersion: 2
-guid: 0dd9926f935089c42b00e37139a163cf
+guid: 212c41f48856233419ad16775200b2c2
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - moneyManager: {fileID: 6610531612572350536, guid: 16e8d27a20514ef4698b900a4da60cfc, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -6,6 +6,8 @@ public class placementController : MonoBehaviour
 {
     public shopManager shopManager;
     public GameObject basicTowerObject;
+    public GameObject sniperTowerObject;
+    public GameObject fastTowerObject;
     private GameObject dummyPlacement;
     public Camera cam;
     private GameObject hoverTile;

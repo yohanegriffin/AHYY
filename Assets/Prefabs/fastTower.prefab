@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 1992824172}
   - component: {fileID: 8402688719386850797}
   m_Layer: 7
-  m_Name: basicTower
+  m_Name: fastTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -194,7 +194,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: 0f1aae88d929f9a43a90aa3de844ecc4, type: 3}
-  m_Color: {r: 1, g: 0.23113209, b: 0.23113209, a: 1}
+  m_Color: {r: 1, g: 0.9931358, b: 0.23137254, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -216,9 +216,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d554a7a948b3494e8ff91db39aab487, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 3
-  damage: 2
-  attackTime: 1
+  range: 2
+  damage: 1
+  attackTime: 0.3
   currentTarget: {fileID: 0}
   pivot: {fileID: 432806170}
   barrel: {fileID: 1106768089}

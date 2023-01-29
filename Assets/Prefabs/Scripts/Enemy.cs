@@ -6,9 +6,12 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private float enemyHealth; 
     [SerializeField] private float movementSpeed; 
+    public moneyManager moneyManager;
+    public playerHealth playerHealth;
 
-    private int killReward; //The amount of money received when killed
-    private int damage; // Health subtracted when enemy reaches the end 
+
+    [SerializeField] public int killReward; //The amount of money received when killed
+    [SerializeField] private int damage;// Health subtracted when enemy reaches the end 
 
     private GameObject targetTile; 
 
@@ -30,14 +33,28 @@ public class Enemy : MonoBehaviour
         enemyHealth -= amount;
         if(enemyHealth <= 0)
         {
+            
             die();
         }
+    }
+
+    public void addKillReward(int amount)
+    {
+        moneyManager.addMoney(amount);
     }
 
     private void die()
     {
         Enemies.enemies.Remove(gameObject);
         Destroy(transform.gameObject);
+        addKillReward(killReward);
+    }
+
+    private void reachedEndofLevel()
+    {
+        Enemies.enemies.Remove(gameObject);
+        Destroy(transform.gameObject);
+        playerHealth.damagePlayer(damage);
     }
 
     private void moveEnemy() {
@@ -55,6 +72,10 @@ public class Enemy : MonoBehaviour
 
                 targetTile = mapGenerator.pathTiles[currentIndex + 1];
             }
+        }
+        if(targetTile == mapGenerator.endTile)
+        {
+            reachedEndofLevel();
         }
     }
     
