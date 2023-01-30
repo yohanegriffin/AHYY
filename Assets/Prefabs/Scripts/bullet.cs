@@ -6,7 +6,7 @@ public class bullet : MonoBehaviour
 {
     private void Start()
     {
-        Destroy(gameObject, 10f);
+        Destroy(gameObject, 5f);
     }
     
     private void OnCollisionEnter2D(Collision2D collision)
@@ -17,6 +17,6 @@ public class bullet : MonoBehaviour
     
     private void Update()
     {
-        transform.position += transform.right * 0.1f;
+        transform.position += transform.right * 0.2f;
     }
 }
