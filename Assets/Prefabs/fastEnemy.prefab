@@ -102,7 +102,7 @@ MonoBehaviour:
   movementSpeed: 2
   playerHealth: {fileID: 0}
   moneyManager: {fileID: 0}
-  killReward: 15
+  killReward: 10
   damage: 5
 --- !u!61 &-2345748517222722709
 BoxCollider2D:
