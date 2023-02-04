@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 2.5
-  damage: 1
+  damage: 1.5
   attackTime: 0.2
   currentTarget: {fileID: 0}
   pivot: {fileID: 432806170}
