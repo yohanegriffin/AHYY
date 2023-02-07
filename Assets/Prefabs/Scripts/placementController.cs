@@ -80,6 +80,10 @@ public class placementController : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            endBuilding();
+        }
     }
 
     public void startBuilding(GameObject towerToBuild)
