@@ -158,16 +158,13 @@ public class mapGenerator : MonoBehaviour
         
         for(int i = 0; i < mapWidth; i++)
         {
-            Debug.Log(mapTiles.IndexOf(mapTiles[i]));
-            mapTiles.RemoveAt(i);
-            Destroy(mapTiles[i]);
-            /*
-            if(i != 7)
+            if(pathTiles.Contains(mapTiles[i]))
             {
-                mapTiles.RemoveAt(i);
-                Destroy(mapTiles[i]);
+
             }
-            */
+            else{
+            Destroy(mapTiles[i]);
+          }
         }
         
         foreach (GameObject obj in pathTiles)
