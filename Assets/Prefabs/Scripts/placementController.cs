@@ -118,8 +118,6 @@ public class placementController : MonoBehaviour
 
     public void Update()
     {
-    Vector2 mousePos = GetMousePosition();
-                Debug.Log(mousePos);
         if(isBuilding == true)
         {
             if(dummyPlacement != null)
