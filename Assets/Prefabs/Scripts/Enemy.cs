@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float movementSpeed; 
     public playerHealth playerHealth;
     public moneyManager moneyManager;
-
+    private bool isSlowed;
 
     [SerializeField] private int killReward; //The amount of money received when killed
     [SerializeField] private int damage;// Health subtracted when enemy reaches the end 
@@ -39,11 +39,30 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    /*private void addKillReward(int amount)
-    {
-        moneyManager.removeMoney(amount);
-    }
-    */
+    public void slowEnemy()
+     {
+        
+        StartCoroutine("slowEffect");
+        
+     }
+
+     private IEnumerator slowEffect()
+     {
+        if(isSlowed == false)
+        {
+        isSlowed = true;
+        float slow = movementSpeed * 0.25f;
+        float origSpeed = movementSpeed;
+        movementSpeed = movementSpeed - slow;
+        yield return new WaitForSeconds(3f);
+        movementSpeed = origSpeed;
+        isSlowed = false;
+        }
+        else{
+
+        }
+      
+     }
     private void die()
     {
         Enemies.enemies.Remove(gameObject);
