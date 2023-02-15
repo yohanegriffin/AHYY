@@ -1,0 +1,29 @@
+using System.Collections;
+using System.Collections.Generic; 
+using UnityEngine; 
+
+public class PlacementManager : MonoBehaviour 
+{
+    public GameObject basicTowerObject; 
+
+    public GameObject dummyPlacement; 
+
+    public Camera cam; 
+
+    public Vector2 GetMousePosition() {
+        return cam.ScreenToWorldPoint(Input.mousePosition);
+    }
+
+    public void GetCurrentHoverTile() 
+    {
+        Vector2 mousePosition = GetMousePosition();
+
+        RaycastHit2D hit; 
+
+        if(Physics2D.Raycast(mousePosition.Vector2(0,0)))
+    }
+
+    public void Update() {
+        Debug.Log(GetMousePosition());
+    }
+}
