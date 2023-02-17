@@ -167,7 +167,7 @@ TextureImporter:
         width: 62
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -175,6 +175,48 @@ TextureImporter:
       bones: []
       spriteID: 4780fe2d92dc8f24783589e23ee4c673
       internalID: -703259531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spider
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 138
+        width: 66
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b23a33cba6b21374c9fbd1f4fc0fbdb4
+      internalID: 147488822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: healBug
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 207
+        width: 56
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26f30d08e36304240a97a004bdac3025
+      internalID: -1118611809
       vertices: []
       indices: 
       edges: []
@@ -190,7 +232,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      healBug: -1118611809
       basicBug: -703259531
+      Spider: 147488822
       bat: -1443778127
       tankBug: 1832174257
   spritePackingTag: 

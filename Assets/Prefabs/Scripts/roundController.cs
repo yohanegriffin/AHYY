@@ -40,7 +40,12 @@ public class roundController : MonoBehaviour
     {
         for(int i = 0; i < round; i++)
         {
-            GameObject newEnemy = Instantiate(basicEnemy, mapGenerator.startTile.transform.position, Quaternion.identity);
+            for(int j = 0; j < 5; j++)
+            {
+                GameObject newEnemy = Instantiate(basicEnemy, mapGenerator.startTile.transform.position, Quaternion.identity);
+                yield return new WaitForSeconds(0.5f);
+            }
+            
             if(round % 2 == 0)
             {
                 GameObject newFastEnemy = Instantiate(fastEnemy, mapGenerator.startTile.transform.position, Quaternion.identity);
