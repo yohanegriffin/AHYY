@@ -8,6 +8,8 @@ public class roundController : MonoBehaviour
     public GameObject basicEnemy;
     public GameObject fastEnemy;
     public GameObject tankEnemy;
+    public GameObject strongerEnemy;
+    public GameObject healEnemy;
 
     public float timeBetweenWaves;
     public float timeBeforeRoundStarts;
@@ -17,7 +19,8 @@ public class roundController : MonoBehaviour
     public bool isIntermission;
     public bool isStartOfRound;
 
-    public playerHealth playerHealth;
+    public playerHealth hp;
+    public moneyManager money;
 
     public int round;
 
@@ -40,21 +43,31 @@ public class roundController : MonoBehaviour
     {
         for(int i = 0; i < round; i++)
         {
-            for(int j = 0; j < 5; j++)
+            GameObject newHeal = Instantiate(healEnemy, mapGenerator.startTile.transform.position, Quaternion.identity);
+            newHeal.GetComponent<healEnemy>().money = money;
+            newHeal.GetComponent<healEnemy>().hp = hp;
+           /*for(int j = 0; j < 3; j++)
             {
                 GameObject newEnemy = Instantiate(basicEnemy, mapGenerator.startTile.transform.position, Quaternion.identity);
+                newEnemy.GetComponent<Enemy>().money = money;
+                newEnemy.GetComponent<Enemy>().hp = hp;
+
                 yield return new WaitForSeconds(0.5f);
             }
             
             if(round % 2 == 0)
             {
                 GameObject newFastEnemy = Instantiate(fastEnemy, mapGenerator.startTile.transform.position, Quaternion.identity);
+                newFastEnemy.GetComponent<Enemy>().money = money;
+                newFastEnemy.GetComponent<Enemy>().hp = hp;
             }
 
             if(round % 5 == 0)
             {
                 GameObject newTankEnemy = Instantiate(tankEnemy, mapGenerator.startTile.transform.position, Quaternion.identity);
-            }
+                newTankEnemy.GetComponent<Enemy>().money = money;
+                newTankEnemy.GetComponent<Enemy>().hp = hp;
+            }*/
             yield return new WaitForSeconds(1f);
         }
         
@@ -85,7 +98,7 @@ public class roundController : MonoBehaviour
         }
         else if(isRoundGoing)
         {
-            if(Enemies.enemies.Count > 3)
+            if(Enemies.enemies.Count > 0)
             {
 
             }

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2599983674763474283}
   - component: {fileID: 8146382612924033531}
-  - component: {fileID: -8461687009926366549}
+  - component: {fileID: 5600867887994745926}
   - component: {fileID: -2345748517222722709}
   m_Layer: 0
   m_Name: healEnemy
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-8461687009926366549
+--- !u!114 &5600867887994745926
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,15 +95,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1541091528963462695}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0dd9926f935089c42b00e37139a163cf, type: 3}
+  m_Script: {fileID: 11500000, guid: d6b022512cce00347a308e339db69398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 15
   movementSpeed: 0.7
-  playerHealth: {fileID: 0}
-  moneyManager: {fileID: 0}
+  hp: {fileID: 0}
+  money: {fileID: 0}
   killReward: 10
   damage: 10
+  targetTile: {fileID: 0}
+  isHealing: 0
 --- !u!61 &-2345748517222722709
 BoxCollider2D:
   m_ObjectHideFlags: 0

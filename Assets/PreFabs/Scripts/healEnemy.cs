@@ -5,13 +5,19 @@ using UnityEngine;
 public class healEnemy : Enemy
 {
     public bool isHealing;
-    private float origHealth;
+    private static float origHealth;
 
-   public void heal()
-   {
-    origHealth = enemyHealth;
-    StartCoroutine("healing");
-   }
+   protected override void Start()
+    {
+        base.Start();
+        origHealth = enemyHealth;
+        isHealing = false;
+    }
+
+    public void heal()
+    {
+        StartCoroutine("healing");
+    }
 
     private IEnumerator healing()
     {
@@ -20,26 +26,31 @@ public class healEnemy : Enemy
             isHealing = true;
             while(enemyHealth < origHealth)
             {
-                if(enemyHealth + 3f > origHealth)
+                if(enemyHealth + 5f > origHealth)
                 {
                     enemyHealth = origHealth;
                 }
-                enemyHealth += 3f;
-                yield return new WaitForSeconds(2f);
+                else{
+                    enemyHealth += 5f;
+                }
+                
+                yield return new WaitForSeconds(5f);
             }
             
-        isHealing = false;
+            isHealing = false;
         }
         else{
 
         }
-        }
     }
 
+ 
+
     // Update is called once per frame
-    void Update()
+   protected override void Update()
     {
-        if(isHealing == false)
+        base.Update();
+        if(enemyHealth < origHealth)
         {
             heal();
         }
