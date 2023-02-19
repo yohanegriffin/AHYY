@@ -129,9 +129,17 @@ public class placementController : MonoBehaviour
             }
             if(Input.GetButtonDown("Fire1"))
             {
+                Vector2 mousePosition = GetMousePosition();
+                RaycastHit2D hit = Physics2D.Raycast(mousePosition, new Vector2(0,0), 0.1f, mask, -100, 100);
+
+                if(hit.collider != null)
+                {
+
                 placeBuilding();
                 cancelText.SetActive(false);
+                }
             }
+
             if(Input.GetKeyDown(KeyCode.X))
             {
                 endBuilding();
