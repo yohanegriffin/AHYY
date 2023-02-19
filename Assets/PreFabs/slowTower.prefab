@@ -57,7 +57,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1106768088}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.61, y: 0, z: 0}
+  m_LocalPosition: {x: 0.62, y: -0.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -126,11 +126,11 @@ GameObject:
   m_Component:
   - component: {fileID: 89174720174573699}
   - component: {fileID: 9028329000591539717}
-  - component: {fileID: -2013873574450921722}
   - component: {fileID: 1992824172}
   - component: {fileID: 8402688719386850797}
+  - component: {fileID: 3662360764339416160}
   m_Layer: 7
-  m_Name: sniperTower
+  m_Name: slowTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -145,7 +145,7 @@ Transform:
   m_GameObject: {fileID: 959773958016124928}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.52, z: 1}
+  m_LocalScale: {x: 0.52, y: 0.52, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 432806170}
@@ -193,7 +193,7 @@ SpriteRenderer:
   m_SortingLayerID: 928001521
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1347678964, guid: 1444974c4ba5e484baed0a4314369293, type: 3}
+  m_Sprite: {fileID: -454954803, guid: 1444974c4ba5e484baed0a4314369293, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -204,25 +204,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-2013873574450921722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 959773958016124928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d554a7a948b3494e8ff91db39aab487, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 15
-  damage: 20
-  attackTime: 3
-  currentTarget: {fileID: 0}
-  pivot: {fileID: 432806170}
-  barrel: {fileID: 1106768089}
-  bullet: {fileID: 404086884319328855, guid: 88a018ccef2bd0b4a879989976189670, type: 3}
 --- !u!114 &1992824172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,7 +218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivot: {fileID: 432806170}
   barrel: {fileID: 1106768089}
-  tower: {fileID: -2013873574450921722}
+  tower: {fileID: 3662360764339416160}
 --- !u!61 &8402688719386850797
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -255,7 +236,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.6, y: 0.52}
+    oldSize: {x: 0.52, y: 0.52}
     newSize: {x: 1.6, y: 1.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 1
@@ -264,3 +245,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &3662360764339416160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959773958016124928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc4d0aca01be014b977dcd1c2344ca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 4
+  damage: 0
+  attackTime: 3
+  currentTarget: {fileID: 0}
+  pivot: {fileID: 432806170}
+  barrel: {fileID: 1106768089}
+  bullet: {fileID: 404086884319328855, guid: be5c54c56c9fe9d4dbd976ba442ed43d, type: 3}

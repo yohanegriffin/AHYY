@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -8461687009926366549}
   - component: {fileID: -2345748517222722709}
   m_Layer: 0
-  m_Name: basicEnemy
+  m_Name: strongerBasicEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,12 +75,12 @@ SpriteRenderer:
   m_SortingLayerID: 391283983
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: -703259531, guid: eb422780323f6c84f83e145093b30579, type: 3}
+  m_Sprite: {fileID: 147488822, guid: eb422780323f6c84f83e145093b30579, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 1.5, y: 1.5}
+  m_Size: {x: 1.2, y: 1.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -98,12 +98,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dd9926f935089c42b00e37139a163cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 10
-  movementSpeed: 0.8
-  playerHealth: {fileID: 8021496710425486215, guid: 467a03865d912494cbe911062974a931, type: 3}
-  moneyManager: {fileID: 2447220490601970929, guid: 16e8d27a20514ef4698b900a4da60cfc, type: 3}
-  killReward: 10
-  damage: 10
+  enemyHealth: 18
+  movementSpeed: 1.2
+  playerHealth: {fileID: 0}
+  moneyManager: {fileID: 0}
+  killReward: 20
+  damage: 20
 --- !u!61 &-2345748517222722709
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -121,8 +121,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.62, y: 0.44}
-    newSize: {x: 1.5, y: 1.5}
+    oldSize: {x: 0.66, y: 0.47}
+    newSize: {x: 1.2, y: 1.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 1
     adaptiveTiling: 0

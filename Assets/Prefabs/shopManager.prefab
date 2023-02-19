@@ -44,6 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1ebba04ea088cb42b2a05d4b7b6d7cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moneyManager: {fileID: 6610531612572350536, guid: 16e8d27a20514ef4698b900a4da60cfc, type: 3}
+  moneyManager: {fileID: 0}
   basicTowerPrefab: {fileID: 959773958016124928, guid: c4b2b3c67285c294ab8eeafc8037d08e, type: 3}
-  basicTowerCost: 500
+  sniperTowerPrefab: {fileID: 959773958016124928, guid: 30b9e7833a732674d98ba0dbc4607633, type: 3}
+  fastTowerPrefab: {fileID: 959773958016124928, guid: b5624186eb71f274997ce3cddc63a6a0, type: 3}
+  slowTowerPrefab: {fileID: 959773958016124928, guid: efe08840288a31a409f159c393371a1d, type: 3}
+  splashTowerPrefab: {fileID: 959773958016124928, guid: a058251a537e73e4689152e4b555cd46, type: 3}
+  basicTowerCost: 30
+  sniperTowerCost: 100
+  fastTowerCost: 60
+  slowTowerCost: 100
+  splashTowerCost: 300

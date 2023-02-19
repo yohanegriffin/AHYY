@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7976163756752961418}
-  - component: {fileID: 8797125426650089836}
+  - component: {fileID: -459724145972769710}
   m_Layer: 0
   m_Name: roundController
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8797125426650089836
+--- !u!114 &-459724145972769710
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,10 +45,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   basicEnemy: {fileID: 1541091528963462695, guid: c337ad346dca6ac4d9ba4ae10d66a01b, type: 3}
-  timeBetweenWaves: 5
+  fastEnemy: {fileID: 1541091528963462695, guid: b4704adfb8ea6654e803c71c542423c0, type: 3}
+  tankEnemy: {fileID: 1541091528963462695, guid: 8a7f21bce884b7e4a865e4ae41073803, type: 3}
+  strongerEnemy: {fileID: 1541091528963462695, guid: 57359ee026d251f49ac5f566b0cc67c3, type: 3}
+  healEnemy: {fileID: 1541091528963462695, guid: a0bdcad55da80234a8fa7bfdc7ad2f8f, type: 3}
+  timeBetweenWaves: 3
   timeBeforeRoundStarts: 5
   timeVariable: 0
   isRoundGoing: 0
   isIntermission: 0
   isStartOfRound: 0
+  hp: {fileID: 0}
+  money: {fileID: 0}
   round: 0
