@@ -15,10 +15,11 @@ public class placementController : MonoBehaviour
     public LayerMask towerMask;
     public bool isBuilding;
     private GameObject currentTowerPlacing;
+    public GameObject cancelText;
 
     public void Start()
     {
-        
+        cancelText.SetActive(false);
     }
     public Vector2 GetMousePosition()
     {
@@ -80,16 +81,13 @@ public class placementController : MonoBehaviour
                 }
             }
         }
-        else
-        {
-            endBuilding();
-        }
     }
 
     public void startBuilding(GameObject towerToBuild)
     {
         isBuilding = true;
         currentTowerPlacing = towerToBuild;
+        cancelText.SetActive(true);
 
         dummyPlacement = Instantiate(currentTowerPlacing);
 
@@ -120,6 +118,7 @@ public class placementController : MonoBehaviour
     {
         if(isBuilding == true)
         {
+            
             if(dummyPlacement != null)
             {
                 getCurrentHoverTile();
@@ -130,15 +129,13 @@ public class placementController : MonoBehaviour
             }
             if(Input.GetButtonDown("Fire1"))
             {
-                Vector2 mousePosition = GetMousePosition();
-                RaycastHit2D hit = Physics2D.Raycast(mousePosition, new Vector2(0,0), 0.1f, mask, -100, 100);
-
-                if(hit.collider != null)
-                {
-
                 placeBuilding();
-
-                }
+                cancelText.SetActive(false);
+            }
+            if(Input.GetKeyDown(KeyCode.X))
+            {
+                endBuilding();
+                cancelText.SetActive(false);
             }
         }
     }
