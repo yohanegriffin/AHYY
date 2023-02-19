@@ -193,7 +193,7 @@ SpriteRenderer:
   m_SortingLayerID: 928001521
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1036332665, guid: 1444974c4ba5e484baed0a4314369293, type: 3}
+  m_Sprite: {fileID: -454954803, guid: 1444974c4ba5e484baed0a4314369293, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -263,5 +263,4 @@ MonoBehaviour:
   currentTarget: {fileID: 0}
   pivot: {fileID: 432806170}
   barrel: {fileID: 1106768089}
-  bullet: {fileID: 404086884319328855, guid: e28edec9cd7f48744a0b019794a3585b, type: 3}
-  slowAmt: 0.25
+  bullet: {fileID: 404086884319328855, guid: be5c54c56c9fe9d4dbd976ba442ed43d, type: 3}

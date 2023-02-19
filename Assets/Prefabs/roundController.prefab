@@ -44,14 +44,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa9b120842463f04fa9a0d5b61c795ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basicEnemy: {fileID: 0}
-  fastEnemy: {fileID: 0}
-  tankEnemy: {fileID: 0}
-  timeBetweenWaves: 0
-  timeBeforeRoundStarts: 0
+  basicEnemy: {fileID: 1541091528963462695, guid: c337ad346dca6ac4d9ba4ae10d66a01b, type: 3}
+  fastEnemy: {fileID: 1541091528963462695, guid: b4704adfb8ea6654e803c71c542423c0, type: 3}
+  tankEnemy: {fileID: 1541091528963462695, guid: 8a7f21bce884b7e4a865e4ae41073803, type: 3}
+  strongerEnemy: {fileID: 1541091528963462695, guid: 57359ee026d251f49ac5f566b0cc67c3, type: 3}
+  healEnemy: {fileID: 1541091528963462695, guid: a0bdcad55da80234a8fa7bfdc7ad2f8f, type: 3}
+  timeBetweenWaves: 3
+  timeBeforeRoundStarts: 5
   timeVariable: 0
   isRoundGoing: 0
   isIntermission: 0
   isStartOfRound: 0
-  playerHealth: {fileID: 0}
+  hp: {fileID: 0}
+  money: {fileID: 0}
   round: 0

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class bullet : MonoBehaviour
 {
+    public float speed;
+
     private void Start()
     {
         Destroy(gameObject, 5f);
@@ -17,6 +19,6 @@ public class bullet : MonoBehaviour
     
     private void Update()
     {
-        transform.position += transform.right * 0.2f;
+        transform.position += transform.right * speed;
     }
 }
