@@ -664,6 +664,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1ebba04ea088cb42b2a05d4b7b6d7cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1660247872 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5948529892718034137, guid: 597a5e2fec86d3e43a98aebcdcf48f31, type: 3}
+  m_PrefabInstance: {fileID: 2089697279}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1997242211
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -678,7 +683,7 @@ PrefabInstance:
     - target: {fileID: 4128765512493972753, guid: 3d82a263f02ed514e91292b78e842855, type: 3}
       propertyPath: cancelText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1660247872}
     - target: {fileID: 4128765512493972753, guid: 3d82a263f02ed514e91292b78e842855, type: 3}
       propertyPath: shopManager
       value: 
@@ -805,18 +810,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 372008301, guid: 597a5e2fec86d3e43a98aebcdcf48f31, type: 3}
-      propertyPath: m_Color.b
-      value: 0.21960786
-      objectReference: {fileID: 0}
-    - target: {fileID: 372008301, guid: 597a5e2fec86d3e43a98aebcdcf48f31, type: 3}
-      propertyPath: m_Color.g
-      value: 0.21960786
-      objectReference: {fileID: 0}
-    - target: {fileID: 372008301, guid: 597a5e2fec86d3e43a98aebcdcf48f31, type: 3}
-      propertyPath: m_Color.r
-      value: 0.21960786
-      objectReference: {fileID: 0}
     - target: {fileID: 372008303, guid: 597a5e2fec86d3e43a98aebcdcf48f31, type: 3}
       propertyPath: moneyManager
       value: 
