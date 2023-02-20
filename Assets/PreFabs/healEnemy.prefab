@@ -104,7 +104,6 @@ MonoBehaviour:
   money: {fileID: 0}
   killReward: 10
   damage: 10
-  targetTile: {fileID: 0}
   isHealing: 0
 --- !u!61 &-2345748517222722709
 BoxCollider2D:

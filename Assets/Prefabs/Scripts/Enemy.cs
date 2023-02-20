@@ -5,29 +5,30 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour 
 {
-    [SerializeField] private float enemyHealth; 
-    [SerializeField] private float movementSpeed; 
-    public playerHealth playerHealth;
-    public moneyManager moneyManager;
-    public HealthBarBehavior HealthBar;
+    [SerializeField] public float enemyHealth; 
+    [SerializeField] public float movementSpeed; 
+    public playerHealth hp;
+    public moneyManager money;
+    //public enemyHealthBar HealthBar;
 
 
-    [SerializeField] private int killReward; //The amount of money received when killed
-    [SerializeField] private int damage;// Health subtracted when enemy reaches the end 
+    [SerializeField] public int killReward; //The amount of money received when killed
+    [SerializeField] public int damage;// Health subtracted when enemy reaches the end 
 
     private GameObject targetTile;
+    private bool isSlowed;
 
-    public void Awake()
+    protected virtual void Awake()
     {
         Enemies.enemies.Add(gameObject);
     }
 
-    private void Start() {
+    protected virtual void Start() {
     initializeEnemy();
       
     }
 
-    private void initializeEnemy() {
+    public void initializeEnemy() {
        targetTile = mapGenerator.startTile; 
     }
 
@@ -46,18 +47,44 @@ public class Enemy : MonoBehaviour
         moneyManager.removeMoney(amount);
     }
     */
+
+        public void slowEnemy()
+     {
+        
+        StartCoroutine("slowEffect");
+        
+     }
+
+     private IEnumerator slowEffect()
+     {
+        if(isSlowed == false)
+        {
+        isSlowed = true;
+        float slow = movementSpeed * 0.25f;
+        float origSpeed = movementSpeed;
+        movementSpeed = movementSpeed - slow;
+        yield return new WaitForSeconds(3f);
+        movementSpeed = origSpeed;
+        isSlowed = false;
+        }
+        else{
+
+        }
+      
+     }
+
     private void die()
     {
         Enemies.enemies.Remove(gameObject);
         Destroy(transform.gameObject);
-        moneyManager.addMoney(killReward);
+        money.addMoney(killReward);
     }
 
     private void reachedEndofLevel()
     {
         Enemies.enemies.Remove(gameObject);
         Destroy(transform.gameObject);
-        playerHealth.damagePlayer(damage);
+        hp.damagePlayer(damage);
     }
 
     private void moveEnemy() {
@@ -83,7 +110,7 @@ public class Enemy : MonoBehaviour
         }
     }
     
-    private void Update() {
+    protected virtual void Update() {
     checkPosition();
     if(this){
     moveEnemy();

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,6 +24,7 @@ public class roundController : MonoBehaviour
     public moneyManager money;
 
     public int round;
+    
 
     private void Start()
     {
@@ -33,6 +35,7 @@ public class roundController : MonoBehaviour
         timeVariable = Time.time + timeBeforeRoundStarts;
 
         round = 1;
+  
     }
     private void spawnEnemies()
     {
@@ -43,31 +46,43 @@ public class roundController : MonoBehaviour
     {
         for(int i = 0; i < round; i++)
         {
-            GameObject newHeal = Instantiate(healEnemy, mapGenerator.startTile.transform.position, Quaternion.identity);
-            newHeal.GetComponent<healEnemy>().money = money;
-            newHeal.GetComponent<healEnemy>().hp = hp;
-           /*for(int j = 0; j < 3; j++)
-            {
                 GameObject newEnemy = Instantiate(basicEnemy, mapGenerator.startTile.transform.position, Quaternion.identity);
                 newEnemy.GetComponent<Enemy>().money = money;
                 newEnemy.GetComponent<Enemy>().hp = hp;
 
-                yield return new WaitForSeconds(0.5f);
-            }
+
+            
+            
             
             if(round % 2 == 0)
             {
                 GameObject newFastEnemy = Instantiate(fastEnemy, mapGenerator.startTile.transform.position, Quaternion.identity);
                 newFastEnemy.GetComponent<Enemy>().money = money;
                 newFastEnemy.GetComponent<Enemy>().hp = hp;
+
+              for(int j = 0; j < round - 1; j++)
+               {
+                      GameObject newHeal = Instantiate(healEnemy, mapGenerator.startTile.transform.position, Quaternion.identity);
+                newHeal.GetComponent<healEnemy>().money = money;
+                newHeal.GetComponent<healEnemy>().hp = hp;
+               }
+               
             }
+
+           
 
             if(round % 5 == 0)
             {
                 GameObject newTankEnemy = Instantiate(tankEnemy, mapGenerator.startTile.transform.position, Quaternion.identity);
                 newTankEnemy.GetComponent<Enemy>().money = money;
                 newTankEnemy.GetComponent<Enemy>().hp = hp;
-            }*/
+
+                
+                GameObject hardEnemy = Instantiate(strongerEnemy, mapGenerator.startTile.transform.position, Quaternion.identity);
+                hardEnemy.GetComponent<Enemy>().money = money;
+                hardEnemy.GetComponent<Enemy>().hp = hp;
+                
+            }
             yield return new WaitForSeconds(1f);
         }
         
@@ -98,6 +113,7 @@ public class roundController : MonoBehaviour
         }
         else if(isRoundGoing)
         {
+            Debug.Log(Enemies.enemies.Count);
             if(Enemies.enemies.Count > 0)
             {
 

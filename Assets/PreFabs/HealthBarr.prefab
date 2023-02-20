@@ -47,6 +47,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7871517622305432274}
   - component: {fileID: 7871517622305432275}
+  - component: {fileID: 5291726660520649561}
   m_Layer: 0
   m_Name: Slider
   m_TagString: Untagged
@@ -127,6 +128,22 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5291726660520649561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7871517622305432277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 509e8b161ef1ec2478b3ac5c26a037e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Slider: {fileID: 7871517622305432275}
+  Low: {r: 0, g: 0, b: 0, a: 0}
+  High: {r: 0, g: 0, b: 0, a: 0}
+  Offset: {x: 0, y: 0, z: 0}
 --- !u!1 &7871517622793331582
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,8 +236,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHealth: 0
   movementSpeed: 0
-  playerHealth: {fileID: 0}
-  moneyManager: {fileID: 6610531612572350536, guid: 16e8d27a20514ef4698b900a4da60cfc, type: 3}
+  hp: {fileID: 0}
+  money: {fileID: 0}
   HealthBar: {fileID: 0}
   killReward: 0
   damage: 0
@@ -238,8 +255,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHealth: 0
   movementSpeed: 0
-  playerHealth: {fileID: 0}
-  moneyManager: {fileID: 6610531612572350536, guid: 16e8d27a20514ef4698b900a4da60cfc, type: 3}
+  hp: {fileID: 0}
+  money: {fileID: 0}
   HealthBar: {fileID: 0}
   killReward: 0
   damage: 0
@@ -255,7 +272,6 @@ GameObject:
   - component: {fileID: 7871517623607070802}
   - component: {fileID: 7871517623607070805}
   - component: {fileID: 7871517623607070804}
-  - component: {fileID: 7871517623607070803}
   m_Layer: 0
   m_Name: HealthBarr
   m_TagString: Enemy
@@ -345,22 +361,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &7871517623607070803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7871517623607070806}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de43c18e59236bb438910271e8252a7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Slider: {fileID: 7871517622305432275}
-  Low: {r: 0.8679245, g: 0.061409745, b: 0.061409745, a: 0}
-  High: {r: 0.114142045, g: 0.8962264, b: 0.17982267, a: 0}
-  Offset: {x: 0, y: 0, z: 0}
 --- !u!1 &7871517623684285378
 GameObject:
   m_ObjectHideFlags: 0

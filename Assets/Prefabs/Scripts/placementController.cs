@@ -8,6 +8,8 @@ public class placementController : MonoBehaviour
     public GameObject basicTowerObject;
     public GameObject sniperTowerObject;
     public GameObject fastTowerObject;
+    public GameObject slowTowerObject;
+    public GameObject splashTowerObject;
     private GameObject dummyPlacement;
     public Camera cam;
     private GameObject hoverTile;
