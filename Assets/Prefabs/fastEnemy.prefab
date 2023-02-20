@@ -17,7 +17,7 @@ GameObject:
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &2599983674763474283
 Transform:
@@ -98,11 +98,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dd9926f935089c42b00e37139a163cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 5
+  enemyHealth: 9
   movementSpeed: 2
-  playerHealth: {fileID: 0}
-  moneyManager: {fileID: 0}
-  killReward: 15
+  playerHealth: {fileID: 8021496710425486212, guid: 467a03865d912494cbe911062974a931, type: 3}
+  moneyManager: {fileID: 6610531612572350536, guid: 16e8d27a20514ef4698b900a4da60cfc, type: 3}
+  killReward: 10
   damage: 5
 --- !u!61 &-2345748517222722709
 BoxCollider2D:
