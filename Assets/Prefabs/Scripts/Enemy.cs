@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine; 
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour 
 {
@@ -8,12 +9,13 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float movementSpeed; 
     public playerHealth playerHealth;
     public moneyManager moneyManager;
+    public HealthBarBehavior HealthBar;
 
 
     [SerializeField] private int killReward; //The amount of money received when killed
     [SerializeField] private int damage;// Health subtracted when enemy reaches the end 
 
-    private GameObject targetTile; 
+    private GameObject targetTile;
 
     public void Awake()
     {
