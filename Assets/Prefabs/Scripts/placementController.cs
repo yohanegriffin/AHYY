@@ -87,20 +87,27 @@ public class placementController : MonoBehaviour
 
     public void startBuilding(GameObject towerToBuild)
     {
-        isBuilding = true;
-        currentTowerPlacing = towerToBuild;
-        cancelText.SetActive(true);
-
-        dummyPlacement = Instantiate(currentTowerPlacing);
-
-        if(dummyPlacement.GetComponent<Tower>() != null)
+        if(isBuilding == false)
         {
-            Destroy(dummyPlacement.GetComponent<Tower>());
+            isBuilding = true;
+            currentTowerPlacing = towerToBuild;
+            cancelText.SetActive(true);
+
+            dummyPlacement = Instantiate(currentTowerPlacing);
+
+            if(dummyPlacement.GetComponent<Tower>() != null)
+            {
+                Destroy(dummyPlacement.GetComponent<Tower>());
+            }
+
+            if(dummyPlacement.GetComponent<barrelTargeting>() != null)
+            {
+                Destroy(dummyPlacement.GetComponent<barrelTargeting>());
+            }
         }
-
-        if(dummyPlacement.GetComponent<barrelTargeting>() != null)
-        {
-            Destroy(dummyPlacement.GetComponent<barrelTargeting>());
+        else{
+            endBuilding();
+            startBuilding(towerToBuild);
         }
     }
 
