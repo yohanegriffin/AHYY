@@ -1,0 +1,28 @@
+public SpriteRenderer spriteRenderer;
+public Sprite newSprite;
+void ChangeSprite()
+    {
+        spriteRenderer.sprite = newSprite; 
+    }
+void Start()
+    {
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+    }
+
+void Update()
+    {
+        if(Input.GetMouseButtonDown(0))
+        {
+            ChangeSprite(newSprite);
+        }
+    }
+
+    void ChangeSprite() 
+    { 
+        spriteRenderer.sprite = spriteArray[0]; 
+    }
+
+    void Start()
+    {
+        spriteArray = Resources.LoadAll<Sprite>("BirdHeroSprite");
+    }
