@@ -17,10 +17,13 @@ public class ScoreManagement : MonoBehaviour {
         instance = this; 
     }
 
+     //With reference variable
+     public roundController RoundController;
 
-    // Start is called before the first frame update
     void Start()
     {
+        // Accessing a method in roundController
+        RoundController.Update();
         highscore=PlayerPrefs.GetInt("highscore", 0);
         scoreText.text = score.ToString() + " POINTS";
         highscoreText.text = "HIGHSCORE: " + highscore.ToString();
