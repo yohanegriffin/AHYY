@@ -46,25 +46,28 @@ public class roundController : MonoBehaviour
     {
         
         if(round <= 5){
-            for(int i = 0; i < round; i++){
-            createBasicEnemy();
-            yield return new WaitForSeconds(0.75f);
-            }
-            
-            
             if(round % 2 == 0)
             {
-                for(int i = 0; i < round + 1; i++){
+                for(int i = 0; i < round - 1; i++){
                 createFastEnemy();
-                yield return new WaitForSeconds(0.75f);
+                yield return new WaitForSeconds(0.35f);
                 }
             }
+
+
+            for(int i = 0; i < round; i++){
+            createBasicEnemy();
+            yield return new WaitForSeconds(0.5f);
+            }
+            
+            
+            
 
             if(round % 4 == 0)
             {
                 for(int i = 0; i < round; i++){
                 createHealEnemy();
-                yield return new WaitForSeconds(0.75f);
+                yield return new WaitForSeconds(0.4f);
                 }        
             }
            
@@ -78,10 +81,9 @@ public class roundController : MonoBehaviour
             
                 for(int i = 0; i < round - 1; i++){
                 createStrongEnemy();
-                yield return new WaitForSeconds(0.75f);
+                yield return new WaitForSeconds(0.35f);
                 }        
             }
-            yield return new WaitForSeconds(0.75f);
         }
    
         if(round > 5){
@@ -109,7 +111,7 @@ public class roundController : MonoBehaviour
                 }        
         
         }
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
     }
     private void createBasicEnemy()
     {
