@@ -421,7 +421,11 @@ PrefabInstance:
       objectReference: {fileID: 1235317504}
     - target: {fileID: 7186332739098128652, guid: 29caabe569b0c1946a5bdd2b79b0fbff, type: 3}
       propertyPath: fastTowerCost
-      value: 60
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7186332739098128652, guid: 29caabe569b0c1946a5bdd2b79b0fbff, type: 3}
+      propertyPath: slowTowerCost
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 7186332739098128652, guid: 29caabe569b0c1946a5bdd2b79b0fbff, type: 3}
       propertyPath: basicTowerCost
@@ -433,7 +437,11 @@ PrefabInstance:
       objectReference: {fileID: 959773958016124928, guid: b5624186eb71f274997ce3cddc63a6a0, type: 3}
     - target: {fileID: 7186332739098128652, guid: 29caabe569b0c1946a5bdd2b79b0fbff, type: 3}
       propertyPath: sniperTowerCost
-      value: 100
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 7186332739098128652, guid: 29caabe569b0c1946a5bdd2b79b0fbff, type: 3}
+      propertyPath: splashTowerCost
+      value: 450
       objectReference: {fileID: 0}
     - target: {fileID: 7186332739098128652, guid: 29caabe569b0c1946a5bdd2b79b0fbff, type: 3}
       propertyPath: sniperTowerPrefab
@@ -761,6 +769,10 @@ PrefabInstance:
       propertyPath: moneyManager
       value: 
       objectReference: {fileID: 1235317504}
+    - target: {fileID: 550123076, guid: 597a5e2fec86d3e43a98aebcdcf48f31, type: 3}
+      propertyPath: m_text
+      value: 'Cost: $150'
+      objectReference: {fileID: 0}
     - target: {fileID: 649356066, guid: 597a5e2fec86d3e43a98aebcdcf48f31, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -773,6 +785,10 @@ PrefabInstance:
       propertyPath: playerhealth
       value: 
       objectReference: {fileID: 938810054}
+    - target: {fileID: 1089950365, guid: 597a5e2fec86d3e43a98aebcdcf48f31, type: 3}
+      propertyPath: m_text
+      value: 'Cost: $75'
+      objectReference: {fileID: 0}
     - target: {fileID: 1236223655, guid: 597a5e2fec86d3e43a98aebcdcf48f31, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -949,6 +965,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2100000, guid: 8d2ad47b3de8f114a8c9298c94240383, type: 2}
+    - target: {fileID: 4011126482564794761, guid: 597a5e2fec86d3e43a98aebcdcf48f31, type: 3}
+      propertyPath: m_text
+      value: 'Cost: $450'
+      objectReference: {fileID: 0}
     - target: {fileID: 8652701561634353836, guid: 597a5e2fec86d3e43a98aebcdcf48f31, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -956,6 +976,10 @@ PrefabInstance:
     - target: {fileID: 8652701561634353836, guid: 597a5e2fec86d3e43a98aebcdcf48f31, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: startBuilding
+      objectReference: {fileID: 0}
+    - target: {fileID: 9013587876627010898, guid: 597a5e2fec86d3e43a98aebcdcf48f31, type: 3}
+      propertyPath: m_text
+      value: 'Cost: $80'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 597a5e2fec86d3e43a98aebcdcf48f31, type: 3}

@@ -259,7 +259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 4
   damage: 0
-  attackTime: 3
+  attackTime: 2.25
   currentTarget: {fileID: 0}
   pivot: {fileID: 432806170}
   barrel: {fileID: 1106768089}
