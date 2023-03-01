@@ -290,6 +290,10 @@ PrefabInstance:
       propertyPath: money
       value: 
       objectReference: {fileID: 1235317504}
+    - target: {fileID: -459724145972769710, guid: ec02ef889ed80c241ba456b412fa442c, type: 3}
+      propertyPath: timeBeforeRoundStarts
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5191987339994662631, guid: ec02ef889ed80c241ba456b412fa442c, type: 3}
       propertyPath: m_Name
       value: roundController
