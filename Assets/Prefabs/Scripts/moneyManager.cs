@@ -9,7 +9,7 @@ public class moneyManager : MonoBehaviour
 
     public void Start()
     {
-        starterMoney = 50;
+        starterMoney = 1000;
         this.currentPlayerMoney = starterMoney;
         Debug.Log("Current Money " + getCurrentMoney());
     }
