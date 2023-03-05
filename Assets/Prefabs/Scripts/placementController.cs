@@ -18,10 +18,18 @@ public class placementController : MonoBehaviour
     public bool isBuilding;
     private GameObject currentTowerPlacing;
     public GameObject cancelText;
+    public GameObject basicTowerPop;
+    public GameObject sniperTowerPop;
+    public GameObject fastTowerPop;
+    public GameObject slowTowerPop;
+    public GameObject AOETowerPop;
+    public GameObject FoundObject;
+    public string RaycastReturn;
 
     public void Start()
     {
         cancelText.SetActive(false);
+        basicTowerPop.SetActive(false);
     }
     public Vector2 GetMousePosition()
     {
@@ -121,7 +129,36 @@ public class placementController : MonoBehaviour
         }
     }
 
-    
+     IEnumerator basicPopUp()
+     {
+        basicTowerPop.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        basicTowerPop.SetActive(false);
+     }
+     IEnumerator fastPopUp()
+     {
+        fastTowerPop.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        fastTowerPop.SetActive(false);
+     }
+     IEnumerator sniperPopUp()
+     {
+        sniperTowerPop.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        sniperTowerPop.SetActive(false);
+     }
+     IEnumerator slowPopUp()
+     {
+        slowTowerPop.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        slowTowerPop.SetActive(false);
+     }
+     IEnumerator AOEPopUp()
+     {
+        AOETowerPop.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        AOETowerPop.SetActive(false);
+     }
 
     public void Update()
     {
@@ -155,5 +192,48 @@ public class placementController : MonoBehaviour
                 cancelText.SetActive(false);
             }
         }
+        else if(isBuilding == false)
+        {
+            if(Input.GetButtonDown("Fire1"))
+            {
+                Vector2 mousePosition = GetMousePosition();
+                RaycastHit2D hit = Physics2D.Raycast(mousePosition, new Vector2(0,0), 0.1f, mask, -100, 100);
+
+                if(hit.collider != null)
+                {
+                    RaycastReturn = hit.collider.gameObject.name;
+                    FoundObject = GameObject.Find(RaycastReturn);
+                    int layer = FoundObject.layer;
+                    string layerName = LayerMask.LayerToName(layer);
+                    if(layerName == "Tower"){
+                        if(FoundObject.name == "basicTower(Clone)")
+                        {
+                            StartCoroutine("basicPopUp");
+                        }
+                        if(FoundObject.name == "sniperTower(Clone)")
+                        {
+                            StartCoroutine("sniperPopUp");
+                        }
+                        if(FoundObject.name == "fastTower(Clone)")
+                        {
+                            StartCoroutine("fastPopUp");
+                        }
+                        if(FoundObject.name == "slowTower(Clone)")
+                        {
+                            StartCoroutine("slowPopUp");
+                        }
+                        if(FoundObject.name == "AOETower(Clone)")
+                        {
+                            StartCoroutine("AOEPopUp");
+                        }
+                    }
+                }
+
+
+            }
+
+        }
+
+
     }
 }
