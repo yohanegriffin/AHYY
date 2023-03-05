@@ -60,10 +60,10 @@ public class Enemy : MonoBehaviour
         if(isSlowed == false)
         {
         isSlowed = true;
-        float slow = movementSpeed * 0.25f;
+        float slow = movementSpeed * 0.40f;
         float origSpeed = movementSpeed;
         movementSpeed = movementSpeed - slow;
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(6f);
         movementSpeed = origSpeed;
         isSlowed = false;
         }

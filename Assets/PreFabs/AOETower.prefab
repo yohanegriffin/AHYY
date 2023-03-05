@@ -218,13 +218,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 3.5
   damage: 0
-  attackTime: 2
+  attackTime: 4.5
   currentTarget: {fileID: 0}
   pivot: {fileID: 432806170}
   barrel: {fileID: 1106768089}
   bullet: {fileID: 404086884319328855, guid: c1cb518c3f6464b4f9660f4aadacd1d1, type: 3}
-  expRadius: 1.5
-  expDamage: 12
+  expRadius: 1
+  expDamage: 10
 --- !u!114 &1992824172
 MonoBehaviour:
   m_ObjectHideFlags: 0

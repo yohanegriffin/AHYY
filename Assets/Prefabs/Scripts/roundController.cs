@@ -44,47 +44,117 @@ public class roundController : MonoBehaviour
 
     IEnumerator iSpawnEnemies()
     {
-        for(int i = 0; i < round; i++)
-        {
-                GameObject newEnemy = Instantiate(basicEnemy, mapGenerator.startTile.transform.position, Quaternion.identity);
-                newEnemy.GetComponent<Enemy>().money = money;
-                newEnemy.GetComponent<Enemy>().hp = hp;
-
-
-            
-            
-            
+        
+        if(round <= 5){
             if(round % 2 == 0)
             {
-                GameObject newFastEnemy = Instantiate(fastEnemy, mapGenerator.startTile.transform.position, Quaternion.identity);
-                newFastEnemy.GetComponent<Enemy>().money = money;
-                newFastEnemy.GetComponent<Enemy>().hp = hp;
-
-              for(int j = 0; j < round - 1; j++)
-               {
-                      GameObject newHeal = Instantiate(healEnemy, mapGenerator.startTile.transform.position, Quaternion.identity);
-                newHeal.GetComponent<healEnemy>().money = money;
-                newHeal.GetComponent<healEnemy>().hp = hp;
-               }
-               
+                for(int i = 0; i < round - 1; i++){
+                createFastEnemy();
+                yield return new WaitForSeconds(0.35f);
+                }
             }
 
+
+            for(int i = 0; i < round; i++){
+            createBasicEnemy();
+            yield return new WaitForSeconds(0.5f);
+            }
+            
+            
+            
+
+            if(round % 4 == 0)
+            {
+                for(int i = 0; i < round; i++){
+                createHealEnemy();
+                yield return new WaitForSeconds(0.4f);
+                }        
+            }
            
 
             if(round % 5 == 0)
             {
-                GameObject newTankEnemy = Instantiate(tankEnemy, mapGenerator.startTile.transform.position, Quaternion.identity);
-                newTankEnemy.GetComponent<Enemy>().money = money;
-                newTankEnemy.GetComponent<Enemy>().hp = hp;
-
-                
-                GameObject hardEnemy = Instantiate(strongerEnemy, mapGenerator.startTile.transform.position, Quaternion.identity);
-                hardEnemy.GetComponent<Enemy>().money = money;
-                hardEnemy.GetComponent<Enemy>().hp = hp;
-                
+                for(int i = 0; i < round - 3; i++){
+                createTankEnemy();
+                yield return new WaitForSeconds(0.75f);
+                }        
+            
+                for(int i = 0; i < round - 1; i++){
+                createStrongEnemy();
+                yield return new WaitForSeconds(0.35f);
+                }        
             }
-            yield return new WaitForSeconds(1f);
         }
+   
+        if(round > 5){
+
+            
+            for(int i = 0; i < round + 1; i++){
+            createBasicEnemy();
+            yield return new WaitForSeconds(0.75f);
+            }
+            for(int i = 0; i < round + 2; i++){
+                createFastEnemy();
+                yield return new WaitForSeconds(0.4f);
+                }
+            for(int i = 0; i < round - 5; i++){
+                createTankEnemy();
+                yield return new WaitForSeconds(0.75f);
+                }    
+            for(int i = 0; i < round - 1; i++){
+                createHealEnemy();
+                yield return new WaitForSeconds(0.75f);
+                }  
+            for(int i = 0; i < round - 2; i++){
+                createStrongEnemy();
+                yield return new WaitForSeconds(0.75f);
+                }        
+        
+        }
+        yield return new WaitForSeconds(0.1f);
+    }
+    private void createBasicEnemy()
+    {
+        
+        GameObject newEnemy = Instantiate(basicEnemy, mapGenerator.startTile.transform.position, Quaternion.identity);
+        newEnemy.GetComponent<Enemy>().money = money;
+        newEnemy.GetComponent<Enemy>().hp = hp;
+       
+    }
+
+    private void createFastEnemy()
+    {
+ 
+        GameObject newEnemy = Instantiate(fastEnemy, mapGenerator.startTile.transform.position, Quaternion.identity);
+        newEnemy.GetComponent<Enemy>().money = money;
+        newEnemy.GetComponent<Enemy>().hp = hp;
+        
+    }
+
+    private void createTankEnemy()
+    {
+  
+        GameObject newEnemy = Instantiate(tankEnemy, mapGenerator.startTile.transform.position, Quaternion.identity);
+        newEnemy.GetComponent<Enemy>().money = money;
+        newEnemy.GetComponent<Enemy>().hp = hp;
+        
+    }
+
+    private void createHealEnemy()
+    {
+
+        GameObject newEnemy = Instantiate(healEnemy, mapGenerator.startTile.transform.position, Quaternion.identity);
+        newEnemy.GetComponent<Enemy>().money = money;
+        newEnemy.GetComponent<Enemy>().hp = hp;
+        
+    }
+
+    private void createStrongEnemy()
+    {
+   
+        GameObject newEnemy = Instantiate(strongerEnemy, mapGenerator.startTile.transform.position, Quaternion.identity);
+        newEnemy.GetComponent<Enemy>().money = money;
+        newEnemy.GetComponent<Enemy>().hp = hp;
         
     }
 

@@ -98,12 +98,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dd9926f935089c42b00e37139a163cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 18
+  enemyHealth: 20
   movementSpeed: 1.2
   hp: {fileID: 0}
   money: {fileID: 0}
-  killReward: 20
-  damage: 20
+  killReward: 10
+  damage: 15
 --- !u!61 &-2345748517222722709
 BoxCollider2D:
   m_ObjectHideFlags: 0
