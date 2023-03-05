@@ -88,7 +88,7 @@ public class roundController : MonoBehaviour
         
     }
 
-    private void Update()
+    public void Update()
     {
         if(isStartOfRound)
         {
