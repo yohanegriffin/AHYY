@@ -46,6 +46,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shopManager: {fileID: 0}
   basicTowerObject: {fileID: 959773958016124928, guid: c4b2b3c67285c294ab8eeafc8037d08e, type: 3}
+  sniperTowerObject: {fileID: 959773958016124928, guid: 30b9e7833a732674d98ba0dbc4607633, type: 3}
+  fastTowerObject: {fileID: 959773958016124928, guid: b5624186eb71f274997ce3cddc63a6a0, type: 3}
+  slowTowerObject: {fileID: 959773958016124928, guid: efe08840288a31a409f159c393371a1d, type: 3}
+  splashTowerObject: {fileID: 959773958016124928, guid: a058251a537e73e4689152e4b555cd46, type: 3}
   cam: {fileID: 0}
   mask:
     serializedVersion: 2
@@ -54,3 +58,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isBuilding: 1
+  cancelText: {fileID: 0}
+  basicTowerPop: {fileID: 0}
+  sniperTowerPop: {fileID: 0}
+  fastTowerPop: {fileID: 0}
+  slowTowerPop: {fileID: 0}
+  AOETowerPop: {fileID: 0}
+  FoundObject: {fileID: 0}
+  RaycastReturn: 
