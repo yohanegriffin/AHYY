@@ -12,8 +12,6 @@ public class shopManager : MonoBehaviour
     public GameObject fastTowerPrefab;
     public GameObject slowTowerPrefab;
     public GameObject splashTowerPrefab;
-
-    public Button buildButton;
     
     public int basicTowerCost;
     public int sniperTowerCost;
@@ -60,13 +58,9 @@ public class shopManager : MonoBehaviour
 
         bool canBuy = false;
 
-        buildButton.interactable = false;
-
         if(moneyManager.getCurrentMoney() >= cost)
         {
             canBuy = true;
-
-            buildButton.interactable = true;
         }
         return canBuy;
     }
