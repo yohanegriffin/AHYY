@@ -1,19 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-public class NewBehaviourScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class MessageBox : MonoBehaviour
 {
-    public GameObject HoverPanel;
+    public GameObject Script;
 
-    public void OnPointerEnter(PointerEventData eventData)
+    // Start is called before the first frame update
+    public void Start()
     {
-        HoverPanel.SetActive(true);
+        Script.SetActive(false);
     }
 
-    public void OnPointerExit(PointerEventData eventData)
+    public void OnMouseOver()
     {
-        HoverPanel.SetActive(false);
+        Script.SetActive(true);
+    }
+
+    // Update is called once per frame
+    public void OnMouseExit()
+    {
+        Script.SetActive(false);
     }
 }
