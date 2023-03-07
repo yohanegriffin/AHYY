@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &217568457 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7546065797243548354, guid: 597a5e2fec86d3e43a98aebcdcf48f31, type: 3}
+  m_PrefabInstance: {fileID: 2089697279}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &222022078
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,6 +542,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7c9d70e3e18cfc47a0461ae6d930e00, type: 3}
+--- !u!1 &656799985 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 957244127, guid: 597a5e2fec86d3e43a98aebcdcf48f31, type: 3}
+  m_PrefabInstance: {fileID: 2089697279}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &782003796 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8189204401765801969, guid: 597a5e2fec86d3e43a98aebcdcf48f31, type: 3}
+  m_PrefabInstance: {fileID: 2089697279}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &936858974 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2291877792888843061, guid: 597a5e2fec86d3e43a98aebcdcf48f31, type: 3}
+  m_PrefabInstance: {fileID: 2089697279}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &938810054 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8021496710425486212, guid: 467a03865d912494cbe911062974a931, type: 3}
@@ -627,6 +647,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1ebba04ea088cb42b2a05d4b7b6d7cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1427752143 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2107928900842873290, guid: 597a5e2fec86d3e43a98aebcdcf48f31, type: 3}
+  m_PrefabInstance: {fileID: 2089697279}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1630884068 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1720319646701482705, guid: 597a5e2fec86d3e43a98aebcdcf48f31, type: 3}
@@ -688,9 +713,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1653192080}
     - target: {fileID: 4128765512493972753, guid: 3d82a263f02ed514e91292b78e842855, type: 3}
+      propertyPath: AOETowerPop
+      value: 
+      objectReference: {fileID: 936858974}
+    - target: {fileID: 4128765512493972753, guid: 3d82a263f02ed514e91292b78e842855, type: 3}
       propertyPath: shopManager
       value: 
       objectReference: {fileID: 1407003630}
+    - target: {fileID: 4128765512493972753, guid: 3d82a263f02ed514e91292b78e842855, type: 3}
+      propertyPath: fastTowerPop
+      value: 
+      objectReference: {fileID: 1427752143}
+    - target: {fileID: 4128765512493972753, guid: 3d82a263f02ed514e91292b78e842855, type: 3}
+      propertyPath: slowTowerPop
+      value: 
+      objectReference: {fileID: 782003796}
+    - target: {fileID: 4128765512493972753, guid: 3d82a263f02ed514e91292b78e842855, type: 3}
+      propertyPath: basicTowerPop
+      value: 
+      objectReference: {fileID: 217568457}
+    - target: {fileID: 4128765512493972753, guid: 3d82a263f02ed514e91292b78e842855, type: 3}
+      propertyPath: sniperTowerPop
+      value: 
+      objectReference: {fileID: 656799985}
     - target: {fileID: 4128765512493972753, guid: 3d82a263f02ed514e91292b78e842855, type: 3}
       propertyPath: fastTowerObject
       value: 
