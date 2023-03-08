@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
-    [SerializeField] private float range;
-    [SerializeField] private float damage;
-    [SerializeField] private float attackTime; // Time in seconds between shots
+    [SerializeField] public float range;
+    [SerializeField] public float damage;
+    [SerializeField] public float attackTime; // Time in seconds between shots
 
     private float nextTimeToShoot;
 

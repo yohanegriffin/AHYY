@@ -102,6 +102,7 @@ MonoBehaviour:
   movementSpeed: 2
   hp: {fileID: 0}
   money: {fileID: 0}
+  kill: {fileID: 0}
   killReward: 5
   damage: 5
 --- !u!61 &-2345748517222722709

@@ -9,7 +9,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] public float movementSpeed; 
     public playerHealth hp;
     public moneyManager money;
-    //public enemyHealthBar HealthBar;
+    public killController kill;
+
 
 
     [SerializeField] public int killReward; //The amount of money received when killed
@@ -25,7 +26,7 @@ public class Enemy : MonoBehaviour
 
     protected virtual void Start() {
     initializeEnemy();
-      
+   
     }
 
     public void initializeEnemy() {
@@ -78,6 +79,8 @@ public class Enemy : MonoBehaviour
         Enemies.enemies.Remove(gameObject);
         Destroy(transform.gameObject);
         money.addMoney(killReward);
+        kill.addKill();
+
     }
 
     private void reachedEndofLevel()

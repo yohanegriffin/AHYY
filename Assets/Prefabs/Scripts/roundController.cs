@@ -22,9 +22,10 @@ public class roundController : MonoBehaviour
 
     public playerHealth hp;
     public moneyManager money;
+    public killController kill;
 
     public int round;
-    
+    public float multi;
 
     private void Start()
     {
@@ -35,7 +36,7 @@ public class roundController : MonoBehaviour
         timeVariable = Time.time + timeBeforeRoundStarts;
 
         round = 1;
-  
+        multi = 1f;
     }
     private void spawnEnemies()
     {
@@ -48,6 +49,7 @@ public class roundController : MonoBehaviour
         if(round <= 5){
             if(round % 2 == 0)
             {
+                
                 for(int i = 0; i < round - 1; i++){
                 createFastEnemy();
                 yield return new WaitForSeconds(0.35f);
@@ -74,6 +76,7 @@ public class roundController : MonoBehaviour
 
             if(round % 5 == 0)
             {
+                multi = multi + 0.25f;
                 for(int i = 0; i < round - 3; i++){
                 createTankEnemy();
                 yield return new WaitForSeconds(0.75f);
@@ -119,7 +122,8 @@ public class roundController : MonoBehaviour
         GameObject newEnemy = Instantiate(basicEnemy, mapGenerator.startTile.transform.position, Quaternion.identity);
         newEnemy.GetComponent<Enemy>().money = money;
         newEnemy.GetComponent<Enemy>().hp = hp;
-       
+        newEnemy.GetComponent<Enemy>().kill = kill;
+        newEnemy.GetComponent<Enemy>().enemyHealth = newEnemy.GetComponent<Enemy>().enemyHealth * multi;
     }
 
     private void createFastEnemy()
@@ -128,7 +132,8 @@ public class roundController : MonoBehaviour
         GameObject newEnemy = Instantiate(fastEnemy, mapGenerator.startTile.transform.position, Quaternion.identity);
         newEnemy.GetComponent<Enemy>().money = money;
         newEnemy.GetComponent<Enemy>().hp = hp;
-        
+        newEnemy.GetComponent<Enemy>().kill = kill;
+        newEnemy.GetComponent<Enemy>().enemyHealth = newEnemy.GetComponent<Enemy>().enemyHealth * multi;
     }
 
     private void createTankEnemy()
@@ -137,7 +142,8 @@ public class roundController : MonoBehaviour
         GameObject newEnemy = Instantiate(tankEnemy, mapGenerator.startTile.transform.position, Quaternion.identity);
         newEnemy.GetComponent<Enemy>().money = money;
         newEnemy.GetComponent<Enemy>().hp = hp;
-        
+        newEnemy.GetComponent<Enemy>().kill = kill;
+        newEnemy.GetComponent<Enemy>().enemyHealth = newEnemy.GetComponent<Enemy>().enemyHealth * multi;
     }
 
     private void createHealEnemy()
@@ -146,7 +152,8 @@ public class roundController : MonoBehaviour
         GameObject newEnemy = Instantiate(healEnemy, mapGenerator.startTile.transform.position, Quaternion.identity);
         newEnemy.GetComponent<Enemy>().money = money;
         newEnemy.GetComponent<Enemy>().hp = hp;
-        
+        newEnemy.GetComponent<Enemy>().kill = kill;
+        newEnemy.GetComponent<Enemy>().enemyHealth = newEnemy.GetComponent<Enemy>().enemyHealth * multi;
     }
 
     private void createStrongEnemy()
@@ -155,7 +162,8 @@ public class roundController : MonoBehaviour
         GameObject newEnemy = Instantiate(strongerEnemy, mapGenerator.startTile.transform.position, Quaternion.identity);
         newEnemy.GetComponent<Enemy>().money = money;
         newEnemy.GetComponent<Enemy>().hp = hp;
-        
+        newEnemy.GetComponent<Enemy>().kill = kill;
+        newEnemy.GetComponent<Enemy>().enemyHealth = newEnemy.GetComponent<Enemy>().enemyHealth * multi;
     }
 
     public void Update()
